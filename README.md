@@ -37,7 +37,8 @@ This project was simulated using Packet Tracer.
 2.  **Explore the Diagram:** Open the `Network_Diagram.pkt` in Packet Tracer to explore the network design.
 
 ## Network Diagram
-![Uploading Network_Diagram.png…]()
+![Network_Diagram](https://github.com/user-attachments/assets/4bcb71eb-060f-42d4-9dc9-9e4abc3e250c)
+
 
 
 ## Key Metrics
