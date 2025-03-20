@@ -1,0 +1,119 @@
+Building configuration...
+
+Current configuration : 1330 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname LDMZ
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017BTCS-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ ipv6 address 2A2A:1000:1000:8000::1/52
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1.100
+ encapsulation dot1Q 100
+ no ip address
+ ipv6 address 2A2A:1000:1000:A000::1/52
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface FastEthernet0/1.200
+ encapsulation dot1Q 200
+ no ip address
+ ipv6 address 2A2A:1000:1000:B000::1/52
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface FastEthernet0/1.500
+ encapsulation dot1Q 500
+ no ip address
+ ipv6 address 2A2A:1000:1000:E000::1/52
+ ipv6 enable
+ ipv6 ospf 1 area 0
+!
+interface FastEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface FastEthernet1/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ipv6 router ospf 1
+ router-id 6.6.6.6
+ log-adjacency-changes
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
